@@ -11,9 +11,9 @@
 
       <button class="btn btn-primary" (click)="addDetails()">Display Details</button>
       <p *ngIf="showSecret">Secret password = tuna</p>
-      <p *ngFor="let logItem of logs"
-        [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : ''}"
-        [ngClass]="{special: logItem >= 5}">Click number {{logItem}}</p>
+      <p *ngFor="let logItem of logs; let i = index"
+        [ngStyle]="{backgroundColor: i > 4 ? 'blue' : ''}"
+        [ngClass]="{special: i > 4}">Click number {{logItem}}</p>
     </div>
   </div>
 </div>

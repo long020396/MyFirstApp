@@ -11,6 +11,6 @@ export class AppComponent {
 
   addDetails() {
     this.showSecret = !this.showSecret;
-    this.logs.push(this.logs.length);
+    this.logs.push(new Date());
   }
 }
