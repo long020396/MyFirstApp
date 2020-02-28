@@ -1,1 +1,4 @@
-<p>recipe-edit works!</p>
+<h3 *ngIf="!editMode; else edit">Add new recipe</h3>
+<ng-template #edit>
+    <h3>Edit old recipe</h3>
+</ng-template>
